@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Portfolio</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0; 
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+
+        }
+html{
+     scroll-behavior:initial;
+}
+        
+body{
+    background-color: rgb(2, 2, 23);
+    color: orange;
+   
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px; 
+    background-color: rgb(4, 4, 60);
+}
+nav ul{ 
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 23px;
+    color: #ff004f;
+     
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+nav ul li a:hover{
+    color: rgb(102, 102, 219);
+    font-size: 1.1rem;
+}
+
+.left{ 
+    font-size: 1.5rem;
+}
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 23vh 0 ;
+}
+.firstSection > div{
+    width: 30%;
+
+}
+.leftSection{
+    font-size: 3rem;
+    margin: 30px 0;
+
+}
+.leftSection .btn{
+    background: rgb(255, 167, 4);
+    padding: 12px;
+    color: black;
+    border: 2px white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.rightSection img{
+    width: 120%;
+    align-content: center;
+    border-style: circle;
+    
+}
+.Green{
+    color: blueviolet;
+}
+#element{
+    color: blueviolet;
+}
+
+#about{
+     padding :80px 0;
+     color: lavender;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 120%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 40%;
+} 
+.subtitle{
+     font-size: 60px;
+     font-weight: 600;
+     color: orange;
+}
+.tab-titles{
+    display: flex;
+    margin : 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #b54679;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s; 
+}
+.tab-links.active-link::after{
+    width: 50%;
+      
+}
+.tab-contents{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: orangered;
+    font-size: 14px;
+    padding: 50px 0;
+}
+.tab-contents{
+    display: none; 
+
+}
+.tab-contents.active-tab{
+     display: block;
+}
+
+#portfolio{
+    padding: 50px,0;
+    justify-content: space-between ;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(rgba(0,0,0,0.6),#ff004f ); 
+     border-radius: 10px;
+     position:absolute;
+     left: 0;
+     bottom: 0;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding : 0 40px; 
+     text-align: center;
+     font-size: 14px;
+     transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px; 
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/* ------------contact -------------*/
+.contact left subtitle{
+    flex-basis: 40%;
+    margin-right: 50px;
+    justify-content: space-between;
+    text-size-adjust:50px;
+}
+
+.contact-left{
+    flex-basis: 35%;
+    margin-right: 50px;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+} 
+.contact-left p i{
+    color:#b54679;
+    margin-right: 50px; 
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: orangered;
+    border-radius: 10px;
+ 
+}
+.contact-right form{
+    width: 100%;
+}
+form input , form textarea{
+     width: 90%;
+     border: 0;
+     outline: none;
+     background: #262626; 
+     padding: 15px;
+     margin: 15px 0;
+     color: white;
+     font-size: 18px;
+     border-radius: 6px ;
+     
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding:25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+     
+}
+
+
+    </style> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Amit Kumar</div>
+            <div class="right">
+                <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#portfolio">Projects</a></li>
+                   <li><a href="#contact">Contact Me</a></li>
+                  
+                </ul> 
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+              <br>Hi, I'm <span class="Green">Amit kumar</span>
+              
+               <div>and I am a </div>
+               <span id="element"></span>
+               <div class="buttons"> 
+                <a href="AmitKumarResume.pdf" download class="btn btn2">Download Resume</a>
+               
+                
+               </div>
+            </div>
+           
+            <div class="rightSection">
+                <img src="big.jpeg" alt="">
+            </div>
+        </section>
+
+    </main>
+    
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="big.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1> 
+                    <p>Hi I am Amit Kumar a passionate problem solver currently pursuing my btech degree in computer science at IIIT DELHI 👨‍🎓.My journey into the world of coding began with a curiousity that quickly turned into a full blown passion. I find immense joy in unravelling complex problems and this drive me to explore endless possibilities of computer science 👨🏻‍💻.
+
+                    </p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('Education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Web Developement</span><br>Web App Developement </li>
+                                <li><span>Data structures and algorithm</span><br>C++</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Education"> 
+                            <ul>
+                                <li><span>2022-current</span><br>IIIT DELHI </li>
+                                <li><span>Higher secondary Education(2021-2022)</span><br>CRPF PUBLIC SCHOOL</li>
+                                <li><span>Secondary Education(2019-2020)</span><br>CRPF PUBLIC SCHOOL</li>
+
+                            </ul>
+                         </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="pic1.jpeg">
+                    <div class="layer">
+                       
+                        <p>You can perform all features in this app.
+
+                        </p>
+                    </div>
+                </div> 
+                <div class="work">
+                    <img src="pic2.jpeg">
+                    <div class="layer">
+                        <h3>8 Puzzle Problem</h3>
+                        <p>This basically takes 8 steps to reach a goal.
+
+                        </p>
+                    </div>
+                </div> 
+                <div class="work">
+                    <img src="pic3.jpeg">
+                    <div class="layer">
+                       
+                        <p>It will tell you your score also highest one and cherry.
+
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>amit22064@iiitd.ac.in</p> 
+                    <p>8178149578</p>
+                  
+
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea> 
+                        <button type="submit" class="btn btn2">Submit</button>
+                        
+                    </form>
+                </div>
+
+            </div>
+            <div class="copyright">
+                <p>copyright | amitportfolio.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links"); 
+        var tabcontents = document.getElementsByClassName("tab-contents"); 
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link"); 
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab"); 
+            }
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+            </script>
+   
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer.'],
+          typeSpeed: 50, 
+        });
+      </script>
+    
+</body>
+</html>
+
